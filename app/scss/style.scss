@@ -1,0 +1,129 @@
+@import "vars";
+@import "global";
+@import "fonts";
+
+//start header
+.header {
+    background-color: $blue;
+}
+.header__inner {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    a {
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        position: relative;
+        transition: all ease-in 0.3s;
+    }
+}
+.header__inner a {
+    &:hover {
+        color: $orange;
+    }
+}
+.header__menu {
+    margin-right: auto;
+}
+.header__contact {
+    margin-left: auto;
+}
+.header__contact .header__contact-write {
+    width: 200px;
+    background-color: $orange;
+    border-radius: 20px;
+    color: #0088cc;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    
+    // transition: all ease 0.3s;
+}
+.header__contact-write:before {
+    content: "\f1d8";
+    position: absolute;
+    font-family: "icomoon";
+    color: #0088cc;
+    font-size: 15px;
+    left: 17px;
+    
+}
+.header__contact-write:hover {
+    background-color: #fff;
+    color: #0088cc !important;
+}
+
+.menu__list {
+    padding-left: 30px;
+    li {
+        display: inline-block;
+        & + li {
+            margin-left: 40px;
+        }
+    }
+}
+.header__logo {
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    svg {
+        fill: #fff;
+        height: 75px;
+    }
+    &-title {
+        @include vibes;
+        color: #fff;
+        line-height: 7px;
+    }
+}
+
+//end header
+//start promo
+.promo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+}
+.promo__inner {
+    padding: 200px 0 160px;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+
+    &-title {
+        font-size: 150px;
+        @include oswald;
+        line-height: 150px;
+        font-weight: 500;
+        color: #fff;
+    }
+    &-text {
+        @include vibes;
+        font-size: 70px;
+        line-height: 100px;
+        color: $orange;
+    }
+    a {
+        width: 150px;
+        background-color: $orange;
+        border-radius: 20px;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 5px;
+        text-align: center;
+        text-shadow: none;
+        margin-top: 50px;
+        transition: all ease-in 0.3s;
+    }
+    a:hover {
+        background-color: #fff;
+        color: $orange;
+    }
+}
+//end promo

@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+.container__fluid {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 50px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}

@@ -1,0 +1,11 @@
+$blue: #00509d;
+$orange: #fdc500;
+
+@mixin vibes {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 32px;
+}
+@mixin oswald{
+    font-family: 'Oswald', sans-serif;
+}
