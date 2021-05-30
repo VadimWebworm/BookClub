@@ -8,19 +8,13 @@ $(function () {
         nextArrow: '<button class="slick-arrow slick-next"><img src="images/curators/slide-right.svg" alt=""></button>',
         responsive: [
             {
-                breakpoint: 911,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 681,
+                breakpoint: 1230,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 460,
+                breakpoint: 530,
                 settings: {
                     slidesToShow: 1,
                 }
@@ -88,5 +82,17 @@ $(function () {
             })
         }
     });
+    // $(".header__menu-btn").on('click', function () {
+    //     $('.menu__list').slideToggle();
+    // });
+    $('.header__menu-btn').on('click', function (e) {
+        e.preventDefault();
+        // $('.menu__list').slideToggle();
+        $('.header__menu-btn').toggleClass('menu__btn-active');
+        $('.header__menu').toggleClass('menu_active');
+        $('.content').toggleClass('content_active');
+        // var elem = document.querySelector('.header__menu-remove')
+        // elem.remove();
 
+    })
 });
