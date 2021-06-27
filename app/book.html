@@ -24,12 +24,12 @@
                 <nav class="header__menu">
                     <ul class="menu__list">
                         <li>
-                            <a href="#">
+                            <a href="index.html">
                                 Главная
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="active">
+                            <a href="book.html" class="active">
                                 Книги
                             </a>
                         </li>
@@ -54,28 +54,349 @@
             </div>
         </div>
     </header>
-    <div class="content">
-        <footer class="footer">
+    <section class="book">
+        <div class="book__wrapper">
             <div class="container">
-                <div class="footer__menu header__inner">
-                    <ul class=" footer__list">
-                        <li>
-                            <a href="#">
-                                Главная
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="active">
-                                Книги
-                            </a>
-                        </li>
-                    </ul>
+                <div class="book__title title-one">
+                    Библиотека
                 </div>
-                <div class="footer__title">Copyright © 2020–2021 <span>Literary Club</span> © their respective owners.
-                    Shipped from Belgorod, Russia</div>
+                <div class="book__title-two title-two">
+                    Books read
+                </div>
+                <div class="book__inner">
+                    <fieldset class="filters-group">
+                        <legend class="filter-label">Direct sort</legend>
+                        <div class="btn-group sort-options">
+                            <label class="btn">
+                                <input type="radio" class="name-sort_one sort" data-sort="name:asc" /> Название
+                            </label>
+                            <label class="btn">
+                                <input type="radio" class="date-sort sort" data-sort="published-date:asc" /> Дата
+                                прочтения
+                            </label>
+                            <label class="btn">
+                                <input type="radio" class="rating-sort sort" data-sort="price:asc" /> Рейтинг
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="search-group">
+                        <legend class="filter-label">Search</legend>
+                        <form>
+                            <input class="textfield filter__search js-shuffle-search" type="text"
+                                id="filters-search-input" placeholder="Название книги" data-list=".book__inner-box" />
+                        </form>
+                    </div>
+                    <fieldset class="filters-group">
+                        <legend class="filter-label">Reverse sort</legend>
+                        <div class="btn-group sort-options">
+                            <label class="btn">
+                                <input type="radio" class="name-sort_one" data-sort="name:desc" /> Название
+                            </label>
+                            <label class="btn">
+                                <input type="radio" class="date-sort" data-sort="published-date:desc" /> Дата прочтения
+                            </label>
+                            <label class="btn">
+                                <input type="radio" class="rating-sort" data-sort="price:desc" /> Рейтинг
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
             </div>
-        </footer>
-    </div>
+
+            <div class="container-fluid">
+                <div id="grid" class="row my-shuffle-container">
+                    <div class="book__inner-box">
+                        <div class="book__item mix" data-name="роман с кокаином" data-published-date="2020-11-22"
+                            data-price="7.5">
+                            <img src="images/book/book_1_0.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Роман с кокаином
+                                    </div>
+                                    <div class="book__item-date">
+                                        22.11.2020г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>7.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="москва-петушки" data-published-date="2020-12-06"
+                            data-price="8.0">
+                            <img src="images/book/book_2_1.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Москва-Петушки
+                                    </div>
+                                    <div class="book__item-date">
+                                        06.12.2020г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="парадоксия: дневник хищницы"
+                            data-published-date="2020-12-13" data-price="8.0">
+                            <img src="images/book/book_2_0.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Парадоксия: дневник хищницы
+                                    </div>
+                                    <div class="book__item-date">
+                                        13.12.2020г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="book__item mix" data-name="посторонний" data-published-date="2020-12-20"
+                            data-price="8.0">
+                            <img src="images/book/book_3_0.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Посторонний
+                                    </div>
+                                    <div class="book__item-date">
+                                        20.12.2020г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="моряк, которого разбило море"
+                            data-published-date="2020-12-20" data-price="7.0">
+                            <img src="images/book/book_3_1.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Моряк, которого разбило море
+                                    </div>
+                                    <div class="book__item-date">
+                                        20.12.2020г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>7.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="дорога на лос-анделес" data-published-date="2021-01-07"
+                            data-price="6.0">
+                            <img src="images/book/book_2.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Дорога на Лос-Анжелес
+                                    </div>
+                                    <div class="book__item-date">
+                                        07.01.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>6.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="филиал" data-published-date="2021-17-01"
+                            data-price="8.0">
+                            <img src="images/book/book_3.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Филиал
+                                    </div>
+                                    <div class="book__item-date">
+                                        17.01.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="бедные люди" data-published-date="2021-01-24"
+                            data-price="8.0">
+                            <img src="images/book/book_4.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Бедные люди
+                                    </div>
+                                    <div class="book__item-date">
+                                        24.01.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="трудно быть богом" data-published-date="2021-01-14"
+                            data-price="8.1">
+                            <img src="images/book/book_6.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Трудно быть богом
+                                    </div>
+                                    <div class="book__item-date">
+                                        14.02.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="резьба по живому" data-published-date="2021-02-21"
+                            data-price="6.2">
+                            <img src="images/book/book_7.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Резьба по живому
+                                    </div>
+                                    <div class="book__item-date">
+                                        21.02.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>6.2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="портрет дориана грея" data-published-date="2021-02-28"
+                            data-price="8.5">
+                            <img src="images/book/book_8.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Портрет Дориана Грея
+                                    </div>
+                                    <div class="book__item-date">
+                                        28.02.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="котлован" data-published-date="2021-03-07"
+                            data-price="7.7">
+                            <img src="images/book/book_9.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Котлован
+                                    </div>
+                                    <div class="book__item-date">
+                                        07.03.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>7.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="лед" data-published-date="2021-03-14" data-price="7.0">
+                            <img src="images/book/book_9_0.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Лед
+                                    </div>
+                                    <div class="book__item-date">
+                                        14.03.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>7.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book__item mix" data-name="луна и грош" data-published-date="2021-03-18"
+                            data-price="8.5">
+                            <img src="images/book/book_12.jpg" alt="">
+                            <div class="book__item-content">
+                                <div class="book__item-name">
+                                    <div class="book__item-title">
+                                        Луна и Грош
+                                    </div>
+                                    <div class="book__item-date">
+                                        18.03.2021г
+                                    </div>
+                                </div>
+                                <div class="book__item-info">
+                                    <div class="book__item-star">
+                                        Оценка: <span>8.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__menu header__inner">
+                <ul class=" footer__list">
+                    <li>
+                        <a href="index.html">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="book.html" class="active">
+                            Книги
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__title">Copyright © 2020–2021 <span>Literary Club</span> © their respective owners.
+                Shipped from Belgorod, Russia</div>
+        </div>
+    </footer>
 
 
 

@@ -184,6 +184,7 @@
     background-color: $orange;
     border: none;
     position: absolute;
+    cursor: pointer;
 }
 
 .slick-arrow::before {
@@ -302,7 +303,7 @@
         color: $orangeTwo;
     }
 }
-.meetings__info-list .list-area{
+.meetings__info-list .list-area {
     padding: 0px 30px 0px 21px;
 }
 .meetings__info-list .list-date {
@@ -407,9 +408,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
-.thumbs{
+.thumbs {
     text-align: center;
 }
 
@@ -428,14 +428,13 @@
 //     margin-left: -30px;
 //     margin-right: -13px;
 // }
-.thumbs .slick-track{
+.thumbs .slick-track {
     margin-left: 13px;
 }
 
 .thumbs .slick-track div + div {
     // margin-left: 20.5px;
     margin-left: 23.5px;
-
 }
 .thumbs .slick-arrow {
     display: none !important;
@@ -493,5 +492,191 @@
 }
 
 //end footer
+//start book
+.book__wrapper {
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+}
+.products__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.book__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.textfield {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    display: block;
+    max-width: 300px;
+    height: 44px;
+    border: 2px solid $blue;
+    border-radius: 4px;
+    padding: 10px;
+    padding-right: 90px;
+    font-size: 16px;
+    color: #34495e;
+    transition: 0.15s;
+    // margin-top: 20px;
+}
+.textfield::placeholder {
+    color: #34495e;
+    transition: 0.15s;
+    border-color: $orange;
+}
+
+.textfield:hover {
+    outline-width: 0;
+    color: #000;
+    border-color: $orangeTwo;
+}
+.textfield:focus {
+    outline-width: 0;
+    border-color: $orange;
+}
+.filter-label {
+    display: block;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: $orange;
+    @include vibes;
+    font-size: 25px;
+}
+
+.filters-group {
+    padding: 0;
+    margin: 0 0 4px;
+    border: 0;
+}
+.btn-group:after,
+.btn-group:before {
+    content: " ";
+    display: table;
+}
+.btn-group:after {
+    clear: both;
+}
+
+.btn-group .btn {
+    float: left;
+    border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.btn-group .btn:not(:first-child) {
+    margin-left: -1px;
+}
+
+.btn-group .btn:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.btn-group label.btn input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+.btn,
+.no-results {
+    display: inline-block;
+    padding: 12px 10.2px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1.5px solid $blue;
+    color: $text;
+    font-size: 1rem;
+    background-color: rgba(52, 73, 94, 0);
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.btn:focus {
+    outline-width: 0;
+    box-shadow: 0 0 0 2px rgba(52, 73, 94, 0.4);
+}
+
+.btn.active,
+.btn:active {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: $blue;
+    background-color: rgba($color: $orange, $alpha: 0.8);
+}
+
+.btn:focus.active {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(52, 73, 94, 0.4);
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    color: $text;
+    background-color: rgba(52, 73, 94, 0);
+}
+.book__inner-box {
+    padding: 50px 35px;
+    display: flex;
+    justify-content: center;
+    margin-left: -40px;
+    flex-wrap: wrap;
+}
+.book .book__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 40px;
+}
+.book__item {
+    max-width: 200px;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba($color: $blue, $alpha: 0.6);
+    margin-bottom: 30px;
+    img {
+        height: 300px;
+        width: 200px;
+    }
+    &-content {
+        height: 95px;
+    }
+    &-name {
+        padding: 0px 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 55px;
+        border-bottom: 1px solid rgba($color: $blue, $alpha: 0.6);
+    }
+    &-title {
+        color: $text;
+        font-size: 15px;
+        padding: 5px 5px 5px 0px;
+    }
+    &-date {
+        color: $orange;
+        font-size: 12px;
+    }
+    &-info {
+        padding: 10px 5px;
+    }
+    span {
+        color: $orange;
+        padding-left: 5px;
+        font-weight: 600;
+        font-size: 17px;
+    }
+}
+.book__item.hide {
+    display: none;
+}
+.no-results {
+    box-shadow: none;
+    margin: 0;
+    margin-left: 0px !important;
+    cursor: auto
+}
+//end book
 
 @import "media";

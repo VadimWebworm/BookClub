@@ -11,6 +11,14 @@
         padding-left: 0px;
         margin-right: 10px;
     }
+    .book__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .filters-group,
+    .search-group {
+        margin: 10px 50px;
+    }
 }
 @media (max-width: 1000px) {
     .promo {
@@ -190,7 +198,11 @@
             height: 315px;
         }
     }
-    .footer{
+    .filters-group,
+    .search-group {
+        margin: 10px 0px;
+    }
+    .footer {
         margin-top: 60px;
         padding-top: 55px;
     }
@@ -238,9 +250,25 @@
         }
     }
 }
+@media (max-width: 350px) {
+    .textfield {
+        padding-right: 90px;
+        width: 100%;
+    }
+    .btn-group .btn:not(:first-child) {
+        margin-left: 0px;
+    }
+}
 @media (max-width: 330px) {
     .curators__inner-item img {
         width: 250px;
         height: 311px;
     }
 }
+@media (max-width: 255px) {
+    .textfield {
+        padding-right: 10px;
+        width: 100%;
+    }
+}
+

@@ -11,12 +11,14 @@ $(function () {
                 breakpoint: 1230,
                 settings: {
                     slidesToShow: 2,
+                    // autoplay: false
                 }
             },
             {
                 breakpoint: 530,
                 settings: {
                     slidesToShow: 1,
+                    // autoplay: false
                 }
             }
         ]
@@ -82,17 +84,25 @@ $(function () {
             })
         }
     });
-    // $(".header__menu-btn").on('click', function () {
-    //     $('.menu__list').slideToggle();
-    // });
     $('.header__menu-btn').on('click', function (e) {
         e.preventDefault();
-        // $('.menu__list').slideToggle();
         $('.header__menu-btn').toggleClass('menu__btn-active');
         $('.header__menu').toggleClass('menu_active');
         $('.content').toggleClass('content_active');
-        // var elem = document.querySelector('.header__menu-remove')
-        // elem.remove();
+
 
     })
+    $('#filters-search-input').keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+    $(document).ready(function () {
+        $('#filters-search-input').hideseek({
+            nodata: 'Результаты не найдены'
+        });
+    });
+    var mixer = mixitup('.book__wrapper');
 });

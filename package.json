@@ -25,9 +25,11 @@
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "rateyo": "^2.3.5",
+    "shufflejs": "^5.4.1",
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "hideseek": "^0.8.0",
     "rangeslider-js": "^3.2.5"
   }
 }
