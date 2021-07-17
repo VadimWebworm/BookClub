@@ -29,7 +29,10 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "hideseek": "^0.8.0",
-    "rangeslider-js": "^3.2.5"
+    "parallax-js": "^3.1.0",
+    "rangeslider-js": "^3.2.5",
+    "wow.js": "^1.2.2"
   }
 }

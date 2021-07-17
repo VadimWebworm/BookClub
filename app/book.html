@@ -64,7 +64,7 @@
                     Books read
                 </div>
                 <div class="book__inner">
-                    <fieldset class="filters-group">
+                    <fieldset class="filters-group animate__animated animate__fadeInLeft">
                         <legend class="filter-label">Direct sort</legend>
                         <div class="btn-group sort-options">
                             <label class="btn">
@@ -79,14 +79,14 @@
                             </label>
                         </div>
                     </fieldset>
-                    <div class="search-group">
+                    <div class="search-group animate__animated animate__fadeIn">
                         <legend class="filter-label">Search</legend>
                         <form>
                             <input class="textfield filter__search js-shuffle-search" type="text"
                                 id="filters-search-input" placeholder="Название книги" data-list=".book__inner-box" />
                         </form>
                     </div>
-                    <fieldset class="filters-group">
+                    <fieldset class="filters-group animate__animated animate__fadeInRight">
                         <legend class="filter-label">Reverse sort</legend>
                         <div class="btn-group sort-options">
                             <label class="btn">
@@ -105,7 +105,7 @@
 
             <div class="container-fluid">
                 <div id="grid" class="row my-shuffle-container">
-                    <div class="book__inner-box">
+                    <div class="book__inner-box animate__animated animate__fadeInUp wow">
                         <div class="book__item mix" data-name="роман с кокаином" data-published-date="2020-11-22"
                             data-price="7.5">
                             <img src="images/book/book_1_0.jpg" alt="">
@@ -404,6 +404,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

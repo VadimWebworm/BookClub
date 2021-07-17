@@ -26,8 +26,8 @@ $(function () {
     });
     $('.album__inner').slick({
         fade: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        autoplay: false,
+        autoplaySpeed: 4000,
         asNavFor: '.thumbs',
         prevArrow: '<button class="slick-arrow slick-prev"><img src="images/curators/slide-left.svg" alt=""></button>',
         nextArrow: '<button class="slick-arrow slick-next"><img src="images/curators/slide-right.svg" alt=""></button>',
@@ -68,6 +68,7 @@ $(function () {
             "close"
         ],
     });
+    //static_header
     let header = $('.header');
     let hederHeight = header.height(); // вычисляем высоту шапки
 
@@ -92,6 +93,7 @@ $(function () {
 
 
     })
+    //live_search
     $('#filters-search-input').keydown(function (event) {
         if (event.keyCode == 13) {
             event.preventDefault();
@@ -104,5 +106,31 @@ $(function () {
             nodata: 'Результаты не найдены'
         });
     });
+
     var mixer = mixitup('.book__wrapper');
+
+    //animate_to_scroll
+    // $(window).scroll(function (){
+    //     $('.mov').each(function (){
+    //         var imagePos = $(this).offset().top;
+    //         var topOfWindow = $(window).scrollTop();
+    //         if (imagePos < topOfWindow+400) {
+    //             $(this).removeClass('mov');
+    //         }
+    //     });
+    // });
+    // var id="x";
+
+    // $('promo__inner').append('<style>body {overflow-x: hidden;}#allrecords {overflow: visible !important;}#t-header,#t-footer {position: relative;z-index: 2;} .t-rec {position: relative;z-index: 1;}'+id+' { position: -webkit-sticky; position: sticky; top: 0; z-index: 0;}</style>');
+    
+    // $(window).on('load resize', function(){
+    //     $(id).each(function(){
+    //         var topPosition = $(window).height() - $(this).height();
+    //         if (topPosition < 0) {
+    //             $(this).css('top',topPosition)
+    //         } else {
+    //             $(this).css('top',0)
+    //         }
+    //     });
+    // });
 });

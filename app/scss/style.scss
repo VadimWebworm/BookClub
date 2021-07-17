@@ -675,8 +675,54 @@
     box-shadow: none;
     margin: 0;
     margin-left: 0px !important;
-    cursor: auto
+    cursor: auto;
 }
 //end book
+//start animate.css
+.search-group,
+.book__inner-box,
+.download {
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+}
+.promo__inner-title {
+    // animation-delay: 0.5s;
+    animation-duration: 1.5s;
+}
+.promo__inner-text {
+    animation-delay: 0.5s;
+    animation-duration: 1.5s;
+}
+.title-one,
+.title-two {
+    animation-duration: 3s;
+}
+// .curators__inner-item {
+//     animation-delay: 0.5s;
+// }
+.curator-one {
+    animation-delay: 0.5s;
+}
+.curator-two {
+    animation-delay: 0.65s;
+}
+.curator-three {
+    animation-delay: 0.8s;
+}
+.curator-four {
+    animation-delay: 0.95s;
+}
+.curator-five {
+    animation-delay: 1.1s;
+}
+.meetings {
+    &__image {
+        animation-duration: 2s;
+    }
+    &__info {
+        animation-duration: 2s;
+    }
+}
+//end animate.css
 
 @import "media";

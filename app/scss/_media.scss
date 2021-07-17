@@ -34,6 +34,11 @@
             font-size: 37px;
         }
     }
+    //animate
+    .book__inner-box {
+        animation-delay: 0s;
+        animation-duration: 1s;
+    }
 }
 @media (max-width: 800px) {
     .promo__inner-title {
